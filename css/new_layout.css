@@ -94,6 +94,7 @@
     border-bottom: 0 solid #000;
 }
 .menu_list a {
+    display: block;
     color:#fff;
     letter-spacing: -1px;
 }
