@@ -38,4 +38,5 @@ $(function(){
         $(this).css('visibility','hidden');
         $('#menu2').attr("src", $('#menu2').attr("src").replace("menu2r.gif","menu2.gif"));      
     });
+
 });

@@ -179,9 +179,10 @@
     
 }
 .scroll_tbl {
+    width: 660px;
     height: 600px !important;
-    overflow-y: auto;
-    box-sizing: border-box;
+    overflow: auto;
+    /* box-sizing: border-box; */
 }
 
 .new_ca .logo_box.m {
