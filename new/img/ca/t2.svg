@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="282" height="30" viewBox="0 0 94 10">
+  <defs>
+    <style>
+      .cls-1 {
+        font-size: 13px;
+        fill: #333;
+        text-anchor: middle;
+        font-family: Ayuthaya;
+        text-transform: uppercase;
+      }
+    </style>
+  </defs>
+  <text id="architecture" class="cls-1" x="47.419" y="10.221"><tspan x="47.419">architecture</tspan></text>
+</svg>
