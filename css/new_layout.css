@@ -124,15 +124,48 @@
 }
 .new_ca .ca_container .tit {
     position: absolute;
-    top:20px;
-    left:20px;
+    top:140px;
+    left:250px;
     color:#333;
     line-height: 12px;
-    font-size: 12px;
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
 }
 .new_ca .ca_container .tit span {
     display: block;
 }
 .new_ca .ca_container .tit span:last-child {
     margin-left: 20px;
+}
+.new_ca .logo_box {
+    position: absolute;
+    left: 50px;
+    top:83px;
+}
+.new_ca .logo_box img {
+    width: 240px;
+}
+.navi_list {
+    position: absolute;
+    left:165px;
+    top:255px;
+    list-style: none;
+    margin:0;
+    width: 750px;
+    
+}
+.navi_list li {
+    margin:0 0 1px;
+}
+.navi_list li a {
+    width: 100%;
+    display: block;
+    height:30px;
+    line-height: 30px;
+    padding-left: 10px;
+    background: rgba(0,0,0,.5);
+    color:#fff;
+}
+.navi_list li a:hover {
+    background: rgba(0,0,0,.7);
 }
