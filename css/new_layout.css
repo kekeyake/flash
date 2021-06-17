@@ -179,12 +179,15 @@
     
 }
 .scroll_tbl {
-    width: 660px;
+    width: 650px;
     height: 600px !important;
     overflow: auto;
     /* box-sizing: border-box; */
 }
-
+#BList {
+    overflow-y: auto !important;
+    width: 152px;
+}
 .new_ca .logo_box.m {
     position: absolute;
     left: 0;
