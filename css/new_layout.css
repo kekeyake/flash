@@ -169,3 +169,17 @@
 .navi_list li a:hover {
     background: rgba(0,0,0,.7);
 }
+.navi_list.double {
+    left:165px;
+    width: 350px;
+    
+}
+.navi_list.double2 {
+    left:calc( 165px + 370px);
+    width: 375px;
+    
+}
+.scroll_tbl {
+    height: 600px !important;
+    overflow-y: auto;
+}
