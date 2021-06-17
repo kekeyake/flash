@@ -494,3 +494,61 @@
     font-size: 13px;
     color:#fff;
 }
+.d_main {
+    width: 334px;
+    height: 427px;
+    position: relative;
+}
+.d_main img {
+    width: 100%;
+}
+.d_main ul {
+    list-style: none;
+    margin:0;
+    padding:0;
+    position: absolute;
+    left:50px;
+    top:200px;
+}
+.d_main ul li {
+    margin-bottom: 20px;
+}
+.d_main ul a {
+    display: block;
+    text-decoration: none;
+    color:#fff;
+    font-family: serif;
+    padding-left: 25px;
+    background: url(../new/img/d1/d1_bul.jpg) no-repeat 0 50% / 20px;
+    transition: 0.5s;
+    transform: scale(1);
+}
+.d_main ul a:hover {
+    transform: scale(1.2) translateX(20px);
+}
+
+.d_sub_menu {
+    width: 731px;
+    height: 78px;
+}
+.d_sub_menu ul {
+    width: 100%;
+    margin:0;
+    padding:0;
+    list-style: none;
+    display: flex;
+}
+.d_sub_menu ul li {
+    border-bottom: 1px solid rgba(255,255,255,.5);
+}
+.d_sub_menu ul li a {
+    font-family: serif;
+    color:#fff;
+    font-size: 13px;
+}
+.d_sub_menu ul li > a {
+
+}
+.d_sub_menu ul .sub_m {
+    display: none;
+}

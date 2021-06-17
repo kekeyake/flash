@@ -1,0 +1,640 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=euc-kr" />
+<title>KRpia - 한국의 단청예술</title>
+<script language="javascript">
+
+function checkbox_onoff(name, chk){
+	if(name == '3' || name == '8' || name == '9'){
+		document.sr['ct_' + name].checked = chk;
+	}
+	else{
+		var len=document.sr['ct_' + name].length;
+		var i;
+		for(i = 0; i < len; i++)
+			document.sr['ct_' + name][i].checked = chk;
+	}
+}
+
+function result(number, itype){
+	document.sr.image_no.value = number;
+	document.sr.image_type.value = itype;
+	document.sr.action = "search_result_detail.asp";
+	document.sr.submit();
+}
+
+function listsort(stype){
+	document.sr.sort.value = stype;
+	document.sr.action="search_result.asp";
+	document.sr.submit();
+}
+
+function showpage(i){
+	document.sr.page.value = i;
+	document.sr.action = "search_result.asp";
+	document.sr.submit();
+}
+
+function show_list(){
+	document.sr.action = "search_result.asp";
+	document.sr.submit();
+}
+
+function show_page(p){
+	document.sr.image_no.value = p;
+	document.sr.action = "search_result_detail.asp";
+	document.sr.submit();
+
+}
+
+function change_itype(t){
+	document.sr.image_type.value = t;
+	document.sr.action = "search_result_detail.asp";
+	document.sr.submit();
+}
+
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+
+function fontBig() {
+	var i;
+	for(i=0; i<document.all["myFont"].length; i++){
+		var temp;
+		var temp2;
+		temp = document.all["myFont"][i].style.fontSize;
+		temp2 = document.all["myFont"][i].style.lineHeight;
+		if(!temp){
+			temp = 9;
+		}else{
+			temp = parseInt(temp);
+		}
+		if(!temp2){
+			temp2 = 11;
+		}else{
+			temp2 = parseFloat(temp2);
+		}
+
+		if(temp2 < 17){
+			document.all["myFont"][i].style.fontSize = temp + 2 + "pt";
+			document.all["myFont"][i].style.lineHeight = temp2 + 2 + "pt";
+		}
+		else{
+			alert("더이상 확대할 수 없습니다.");
+			return;
+		}
+	}
+}
+
+function fontSmall() {
+	var i;
+	for(i=0; i<document.all["myFont"].length; i++){
+		var temp;
+		var temp2;
+		temp = document.all["myFont"][i].style.fontSize;
+		temp2 = document.all["myFont"][i].style.lineHeight;
+		if(!temp){
+			temp = 9;
+		}else{
+			temp = parseInt(temp);
+		}
+		if(!temp2){
+			temp2 = 11;
+		}else{
+			temp2 = parseFloat(temp2);
+		}
+		if(temp2 > 7){
+			document.all["myFont"][i].style.fontSize = temp - 2 + "pt";
+			document.all["myFont"][i].style.lineHeight = temp2 - 2 + "pt";
+		}
+		else{
+			alert("더이상 축소할 수 없습니다.");
+			return;
+		}
+	}
+}
+
+function showlayer(prefix, val){
+	var i;
+	var obj;
+
+	for(i = 0; i <= 10; i++){
+		obj = document.all[prefix + i];
+
+		if(i == val){
+			obj.style.display = '';
+			obj.style.visibility = '';
+		}
+		else{
+			obj.style.display = 'none';
+			obj.style.visibility = 'hidden';
+		}
+	}
+
+	document.all["ct2"].value = val;
+}
+</script>
+
+
+<script language="javascript">
+<!--
+self.onError=null;
+currentX = currentY = 0; 
+whichIt = null; 
+lastScrollX = 0; lastScrollY = 0;
+NS = (document.layers) ? 100 : 0;
+IE = (document.all) ? 100: 0;
+<!-- STALKER CODE -->
+function heartBeat()
+{
+	if(IE)
+	{
+		diffY = document.body.scrollTop; 
+		diffX = 0; 
+	}
+	if(NS) 
+	{ 
+		diffY = self.pageYOffset;
+		diffX = self.pageXOffset; 
+	}
+	if(diffY != lastScrollY)
+	{
+		percent = .1 * (diffY - lastScrollY);
+		if(percent > 0) percent = Math.ceil(percent);
+		else percent = Math.floor(percent);
+		if(IE) {
+			document.all.floater.style.pixelTop += percent;
+		}
+		if(NS) {
+			document.floater.top += percent; 
+		}
+		lastScrollY = lastScrollY + percent;
+	}
+
+	if(diffX != lastScrollX) 
+	{
+		percent = .1 * (diffX - lastScrollX);
+		if(percent > 0) percent = Math.ceil(percent);
+		else percent = Math.floor(percent);
+		if(IE) {
+			document.all.floater.style.pixelLeft += percent;
+		}
+		if(NS) {
+			document.floater.left += percent;
+		}
+		lastScrollX = lastScrollX + percent;
+	} 
+} 
+
+//-->
+</script>
+
+<!--
+<DIV id=floater style="TOP: 0px;LEFT: 930px; VISIBILITY: visible; POSITION: absolute; z-index=1;">
+<a href="#" class=enggrb>TOP</a>
+</div>
+<script>
+document.all["floater"].style.top = document.body.clientHeight - 90 + "px";
+</script>
+-->
+
+<link href="https://danchung.krpia.co.kr/text.css" rel="stylesheet" type="text/css">
+<link href="css/new_layout.css" rel="stylesheet" type="text/css">
+</head>
+<body background="https://danchung.krpia.co.kr/images/bg.gif" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<table width="996" border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td width="104" height="80" align="center"><img src="https://danchung.krpia.co.kr/images/null.gif" width="240" height="1"><a href="/" onFocus="this.blur();"><img src="https://danchung.krpia.co.kr/images/logo.gif" width="193" height="59" border="0"></a></td>
+    <td width="560" align="center">
+	<script language="javascript" src="https://danchung.krpia.co.kr/common/multi.js"></script>
+	<!-- <script language="javascript">
+		embed_flash('/images/navigation_47.swf', '731', '78');
+	</script>	 -->
+    <div class="d_sub_menu">
+        <ul>
+            <li>
+                <a href="#a">단청의 이해</a>
+                <div class="sub_m">
+                    <a href="#a">단청이란</a>
+                    <a href="#a">단청의 목적</a>
+                    <a href="#a">단청의 기원과 변천</a>
+                    <a href="#a">단청의 분류</a>
+                </div>
+            </li>
+            <li>
+                <a href="#a">단청 제작과정</a>
+                <div class="sub_m">
+                    <a href="#a">단청의 안료</a>
+                    <a href="#a">단청의 배색원리</a>
+                    <a href="#a">단청의 제작과정</a>
+                </div>
+            </li>
+            <li>
+                <a href="#a">단청문양 갤러리</a>
+                <div class="sub_m">
+                    <a href="#a">분류별 문양소개</a>
+                    <a href="#a">문양갤러리</a>
+                    <a href="#a">부재별 문양</a>
+                </div>
+            </li>
+            <li>
+                <a href="#a">영상으로 보는 단청</a>
+                <div class="sub_m">
+                    <a href="#a">봉원사 단청</a>
+                    <a href="#a">10대 사찰의 단청</a>
+                </div>
+            </li>
+            <li>
+                <a href="#a">만봉스님 단청세계</a>
+                <div class="sub_m">
+                    <a href="#a">만봉스님 단청문양의 특징</a>
+                    <a href="#a">조선시대 단청장</a>
+                    <a href="#a">생애와 전승활동</a>
+                    <a href="#a">영상기록</a>
+                    <a href="#a">원화감상</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+	</td>
+    <td width="332">&nbsp;</td>
+  </tr>
+  <tr> 
+
+
+    <td valign="top" background="https://danchung.krpia.co.kr/images/l_bg.gif"><table width="240" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td><img src="https://danchung.krpia.co.kr/images/danchung/l_title.gif" width="240" height="52"></td>
+        </tr>
+        <tr> 
+
+          <td><img src="https://danchung.krpia.co.kr/images/r_null.gif" width="240" height="88"></td>
+
+        </tr>
+        <tr> 
+          <td><img src="https://danchung.krpia.co.kr/images/danchung/l_img.jpg" width="240" height="459"></td>
+        </tr>
+      </table></td>
+
+    <td valign="top" background="https://danchung.krpia.co.kr/images/de_bg.gif"><table width="730" border="0" cellpadding="0" cellspacing="0">
+        <tr> 
+          <td colspan="3"> <table width="733" border="0" cellspacing="0" cellpadding="0">
+              <tr> 
+                <td width="60"><img src="https://danchung.krpia.co.kr/images/danchung/top_l_side.gif" width="60" height="60"></td>
+                <td width="661" valign="top" background="https://danchung.krpia.co.kr/images/danchung/top_bg.gif"><table width="100%" height="59" border="0" cellpadding="0" cellspacing="0">
+                    <tr> 
+
+                      <td height="37"><img src="https://danchung.krpia.co.kr/images/danchung/title01.gif" width="263" height="27"></td>
+
+                    </tr>
+                    <tr> 
+                      <td align="right" valign="bottom" class="eng"><table width="100%" border="0" cellpadding="0" cellspacing="0" class="td">
+                          <tr> 
+                            <td width="97%" align="right"><a href="/">Home</a> 
+                              &gt; <span class="td"><a href="https://danchung.krpia.co.kr/danchung/?menu=1">단청의 이해</a></span> 
+
+                              &gt; <span class="td">단청이란</span>
+
+							</td>
+                            <td width="3%">&nbsp;</td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+                <td width="11" valign="top"><img src="https://danchung.krpia.co.kr/images/danchung/top_r_side.gif" width="11" height="37"></td>
+              </tr>
+            </table></td>
+        </tr>
+
+
+        <tr> 
+
+          <td>&nbsp;</td>
+
+          <td height="30" align="right"><table width="40" border="0" cellspacing="0" cellpadding="0">
+              <tr align="center"> 
+                <td><img src="https://danchung.krpia.co.kr/images/i_zoom.gif" alt="zoom in" width="13" height="13" border="0" onclick='fontBig();' style="cursor:hand"></td>
+                <td><img src="https://danchung.krpia.co.kr/images/i_zoom_out.gif" alt="zoom out" width="13" height="13" border="0" onclick='fontSmall();' style="cursor:hand"></td>
+              </tr>
+            </table></td>
+
+          <td><img src="https://danchung.krpia.co.kr/images/null.gif" width="60" height="1"></td>
+
+        </tr>
+        <tr> 
+
+          <td width="60"><img src="https://danchung.krpia.co.kr/images/null.gif" width="60" height="1"></td>
+
+          <td width="610" height="300" valign="top"><table width="610" border="0" cellpadding="0" cellspacing="0" class="td">
+              <tr align="center"> 
+                <td colspan="3"><table width="600" border="0" cellspacing="0" cellpadding="0">
+                    <tr align="center"> 
+                      <td><img src="https://danchung.krpia.co.kr/images/danchung/de_img02.jpg" width="260" height="160"></td>
+                      <td><img src="https://danchung.krpia.co.kr/images/danchung/de_img01.jpg" width="260" height="160"></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr> 
+                <td id="myFont" height="30" colspan="3"><p>&nbsp;</p></td>
+              </tr>
+              <tr> 
+                <td id="myFont" width="30" rowspan="2"><p><img src="https://danchung.krpia.co.kr/images/null.gif" width="30" height="1"><br>
+                  </p></td>
+                <td id="myFont" width="550" name="cc"><div align="justify" name="cc"><span id="myFont" class="korgr">대자연의 
+                    빛, 그 오묘한 빛깔 하나 하나에 삶의 의미를 새기고, 만물의 형상과 조화를 품어 온갖 상서로움의 표상으로 
+                    승화된 것이 곧 단청이다.</span> 우리의 민족은 삼라만상의 모든 빛깔에서 사물의 이치를 깨닫고, 음양오행과 
+                    오채의 조화를 스스로 터득했다. 한국의 단청, 그것은 곧 우주의 질서에 순응하려는 한민족의 숭고한 영혼이 
+                    빚어낸 만다라, 즉 만덕의 원만한 경지이다. 따라서 단청에는 우리 민족의 정서가 고스란히 녹아들어 있으며, 
+                    오늘날 그 초연한 장엄의 세계로 우리의 발길을 인도한다. </div>
+                  <p align="justify">한국의 전통예술분야가운데 아름다운 색조의 이미지로 쉽게 떠올릴 수 있는 것이 
+                    곧 단청이다. 각양의 상서로운 문양들이 오방을 상징하는 오채금장(五彩金裝)으로 표출되어, 화려함과 오묘함의 
+                    조화를 연출하기 때문이다.<br>
+                    예로부터 ‘백의민족(白衣民族)’이라 불릴 만큼 소박한 민족적 특성에도 불구하고, 지극히 화려한 색 대비의 
+                    예술적 전통을 이룩했다는 점은 우리 민족의 또 다른 잠재력을 보여주는 증거라 하겠다. 즉, 우리의 조상은 
+                    결코 모노톤의 백색만을 기호했던 소박한 백성이 아니었으며, 뜨거운 정열적 감성을 화려한 색채예술로서 승화시킨 
+                    의지적 민족이었음을 깨닫게 해주는 것이 곧 단청인 것이다.</p>
+                  <p align="justify"><span id="myFont" class="korgr">‘단청(丹靑)’을 글자 그대로 풀이한다면 
+                    붉은 색과 푸른 색의 대비와 조화에 국한되는 말이다. 그러나 명사적 의미에서 ‘단청’이란 각종의 안료를 
+                    사용하여 건물의 벽과 부재에 도채(圖彩)하는 모든 행위를 일컫는다. </span><br>
+                    나아가 각종의 조각상이나 공예품 등을 채색(彩色)하는 행위나 서(書).회(繪).화(畵)의 개념을 망라하는 
+                    의미를 폭넓게 함축하고 있다. 따라서 예로부터 단청의 대상은 전통적인 목조건축물은 물론이거니와 고분이나 
+                    동굴의 벽화, 칠기, 공예품, 조각상, 장신구에 이르기까지 매우 광범위하게 적용되었다. </p>
+                  <p align="justify">목조건축문화에서 단청은 필수조건이다. 인류는 일찍이 자연 환경에서 쉽게 구할 
+                    수 있는 목재를 이용하여 주거지를 마련하였다. 약 1만 년 전부터 시작된 신석기시대 특징은 생산경제의 발전과 
+                    기술의 진보 등 두 가지를 들 수 있는바, 이 시기를 ‘인류의 위대한 생산혁명 시대’라 부른다.<br>
+                    신석기시대에는 인류가 식량을 생산할 수 있게 되면서 자연의 의존에서 벗어나 자연을 이용 개발할 수 있는 
+                    단계로까지 발전하게 되었다. 생산력과 인구의 증가에 따라 촌락이 형성되었고 드디어 수혈주거(竪穴住居)라 
+                    불리는 움집형태의 원시건축이 조영되기 시작했다. 움집은 지면을 파서 주거(住居)의 바닥을 지표면보다 0.3～1m 
+                    정도로 낮게 한 반지하식(半地下式) 건축으로 목재를 이용하여 원추형의 지붕을 형성하였는데, 바로 이것이 
+                    인류 최초의 목조건축물이다. <br>
+                    우리 나라에서도 1925년에 서울시 강동구 암사동 유적에서 중기 신석기시대의 움집터가 조사된 이래 지금까지 
+                    10여 기의 수혈주거지가 발견된 바 있다. <br>
+                    이렇게 시작된 원시 목조건축의 출발은 차츰 본격적인 목조건축으로 진보되기 시작하였다. 그런데 목재를 가공 
+                    조립하여 사용하기 시작하면서부터 건축물의 수명연장이 최대의 난관으로 봉착되기에 이르렀다. <br>
+                    특히 한국.중국.일본.대만 등의 지역에서 건축재로 가장 많이 사용된 것이 소나무이다. 소나무는 재질의 특성상 
+                    내강(耐强), 내구(耐久), 내곡성(耐曲性)의 장점이 있으나 동시에 제재된 목재의 표면이 거칠고, 건조 
+                    후 열상(裂傷)이 크다는 단점도 따른다. 따라서 고대인들은 쉽게 썩고 갈라지며 왜곡되는 나무의 단점을 보완하기 
+                    위하여 무언가 조치를 강구해야만 하였다. <br>
+                    그 해결점이 바로 단청(칠)이다. <br>
+                    즉 나무의 조악한 면을 감추고, 부식을 막기 위하여 부재에 천연의 채료(彩料)를 칠하는 방법을 스스로 터득했다. 
+                    그런데 건축부재에 채료를 바르는 작업에도 인간 본성의 미의식이 발휘되었다.<span id="myFont" class="korgr"> 
+                    수명연장을 위하여 부재에 채색을 하더라도 기왕이면 아름다움까지 고려하여 각종의 문양을 장식하기 시작한 것이다. 
+                    바로 그 행위로부터 건축물의 단청이 시작된 것이다.</span></p></td>
+                <td id="myFont" width="30" rowspan="2"><img src="https://danchung.krpia.co.kr/images/null.gif" width="30" height="1"></td>
+              </tr>
+              <tr> 
+
+                <td id="myFont" height="30" align="right"><table width="50" border="0" cellspacing="0" cellpadding="0">
+                    <tr> 
+                      <td bgcolor="#666600"><table width="50" border="0" cellpadding="0" cellspacing="1" class="engr">
+                          <tr> 
+                            <td align="center" bgcolor="B2B656" class="eng"><strong><a href="javascript:;" onclick="javascript:window.open('/text_popup.asp?w=danchung&file=dan1', 'text_popup', 'width=700,height=650,status=yes');"><font color="#FFFFFF">print</font></a></strong></td>
+                          </tr>
+                        </table></td>
+                    </tr>
+                  </table></td>
+              </tr>
+              <tr align="center"> 
+                <td height="40" colspan="3"><a href="#" class="enggrb">TOP</a></td>
+
+              </tr>
+            </table></td>
+
+          <td width="62">&nbsp;</td>
+
+        </tr>
+
+      </table></td>
+    <td valign="top"><table width="20" border="0" cellspacing="0" cellpadding="0">
+        <tr> 
+          <td height="40">&nbsp;</td>
+        </tr>
+        <tr> 
+          <td height="62" valign="top"><a href="javascript:;" onclick="javascript:window.open('/dic/default.html', 'dic', 'width=620,height=600');"><img src="https://danchung.krpia.co.kr/images/icon_dic.gif" width="23" height="59" border="0"></a></td>
+        </tr>
+        <tr> 
+          <td valign="top"><a href="/search.asp"><img src="https://danchung.krpia.co.kr/images/icon_search.gif" width="23" height="33" border="0"></a></td>
+        </tr>
+      </table></td>
+
+<!--include virtual="/auth.asp"-->
+
+
+<form name="logProcForm">
+<input type="hidden" id="sTime" name="sTime" value="2021-06-18 6:27:36">
+<input type="hidden" id="b2c_id" name="b2c_id" value="">
+<input type="hidden" id="svc_id" name="svc_id" value="1">
+<input type="hidden" id="pro_id_now" name="pro_id_now" value="PLCT00004798">
+ 
+</form>
+
+<!-- Google Analytics 占쏙옙占쏙옙 -->
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-22289420-3', 'auto');
+    ga('require', 'displayfeatures');
+    ga('send', 'pageview');
+
+  var _gaq = _gaq || [];
+  if (0 != 1441) {
+      var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+      _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  }
+
+        _gaq.push(['_setCustomVar', 1, 'Member Type', 'Visitor', 1]);
+        _gaq.push(['_setCustomVar', 2, 'B2B Name', '', 1]);
+        _gaq.push(['_setCustomVar', 3, 'B2C ID', '', 1]);
+
+
+  _gaq.push(['_setAccount', 'UA-22289420-3']);
+  _gaq.push(['_trackPageview']);
+
+  (function () {
+      if (0 != 1441) {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      }
+  })();
+
+
+</script>
+<!-- Google Analytics 占쏙옙 -->
+
+<!--log test -->
+<script language="javascript">
+function testLog(logcode){
+	var href = location.href;
+	
+	href = href.substring(href.indexOf(".krpia.co.kr/")+".krpia.co.kr".length, (href.indexOf("?") === -1) ? href.length : href.indexOf("?") );
+	
+	var get_url = "/include/log_action_add.asp";
+	postString = "pro_id_now=" + encodeURIComponent(document.getElementById("pro_id_now").value);
+	//postString += '&p_dCode=';
+	postString += "&tl_code=" + logcode;
+	postString += "&svc_id=" + encodeURIComponent(document.getElementById("svc_id").value);
+	postString += "&sTime=" + document.getElementById("sTime").value;
+	postString += "&b2c_id=" + encodeURIComponent(document.getElementById("b2c_id").value);
+	postString += "&urlDir="+encodeURIComponent(href);
+	//postString += "&arid=";
+	//postString += "&pagenumber=";
+	//postString += "&contentnumber=";
+	loadXMLDoc(get_url);
+}
+	
+	var elem = document.getElementsByTagName("img"), _this;
+	for(var i = 0, len = elem.length; i<len; i++){
+		_this = elem[i];
+		if( (_this.src.search(/\/btn\/save/) > 0) || (_this.src.search(/\/btn\/print/) > 0)){
+			if(_this.addEventListener){
+				_this.addEventListener('click', function(){ return testLog("inAction"); } );
+			}
+			else if(_this.attachEvent){
+				_this.attachEvent('onclick',  function(){ return testLog("inAction"); } );
+			}
+			else{
+				_this.onclick = testLog('imgPopup');
+			}
+		}
+	}
+</script>
+<script language="javascript">
+var postString;
+function goLog(){
+	var href = location.href;
+	href = href.substring(href.indexOf(".krpia.co.kr/")+".krpia.co.kr".length, (href.indexOf("?") === -1) ? href.length : href.indexOf("?") );
+	//alert(href);
+	//alert(parent.location.href);
+	var get_url = "/include/procGapTime.asp";
+	postString = "pro_id_now=" + encodeURIComponent(document.getElementById("pro_id_now").value);
+	postString += "&svc_id=" + encodeURIComponent(document.getElementById("svc_id").value);
+	postString += "&sTime=" + document.getElementById("sTime").value;
+	postString += "&b2c_id=" + encodeURIComponent(document.getElementById("b2c_id").value);
+	postString += "&urlDir="+encodeURIComponent(href);
+	
+	loadXMLDoc(get_url);
+}
+// 占쏙옙占?占쏙옙占?
+function loadXMLDoc(url) 
+{
+	// branch for native XMLHttpRequest object
+	if (window.XMLHttpRequest) 
+	{
+		req = new XMLHttpRequest();
+		req.onreadystatechange = processReqChange;
+		req.open("POST", url, true);
+		req.onreadystatechange = ajaxPostRequest;
+		req.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
+		req.send(postString);
+		// branch for IE/Windows ActiveX version
+	} 
+	else if (window.ActiveXObject) 
+	{
+		isIE = true;
+		req = new ActiveXObject("Microsoft.XMLHTTP");
+		if(req)
+		{
+			req.onreadystatechange = processReqChange;
+			req.open("POST", url, true);
+			req.onreadystatechange = ajaxPostRequest;
+			req.setRequestHeader("Content-Type","application/x-www-form-urlencoded;charset=euc-kr");
+			req.send(postString);
+		}
+	}
+}
+
+function processReqChange() 
+{
+	// only if req shows "loaded"
+	if(req.readyState == 4) 
+	{
+		// only if "OK"
+		if(req.status == 200) 
+		{	
+			//alert('1');
+		} 
+		else 
+		{
+			alert("error\n" + req.statusText);
+		}
+	}
+}
+
+function ajaxPostRequest(){
+	//req = new XMLHttpRequest();
+
+	if (window.XMLHttpRequest) 
+	{
+		req = new XMLHttpRequest();
+	} 
+	else if (window.ActiveXObject) 
+	{
+		req = new ActiveXObject("Microsoft.XMLHTTP");
+	}
+	if(req.readyState==4){
+		if(req.status==200){
+		}
+	}
+}
+</script>
+<script language="javascript">
+//	alert('1');
+//	alert('');
+//	alert('1');
+//	alert('');
+//	alert(document.getElementsByName("Map").length);
+	goLog();
+
+</script>
+
+  </tr>
+  <tr> 
+    <td valign="bottom"><img src="https://danchung.krpia.co.kr/images/l_btm.gif" width="240" height="14"></td>
+    <td valign="bottom"><img src="https://danchung.krpia.co.kr/images/de_btm.gif" width="733" height="14"></td>
+    <td rowspan="2">&nbsp;</td>
+  </tr>
+  <tr> 
+    <td colspan="2"><img src="https://danchung.krpia.co.kr/images/tail.gif" width="955" height="37" border="0" usemap="#Map"></td>
+  </tr>
+</table>
+<map name="Map">
+  <area shape="rect" coords="15,3,103,30" href="http://www.nurimedia.co.kr" target="_blank" onfocus='this.blur();'>
+  <area shape="rect" coords="122,5,207,27" href="http://krpia.co.kr/" target="_blank" onfocus='this.blur();'>
+  <area shape="rect" coords="357,4,424,28" href="/etc/contents.asp" onfocus='this.blur();'>
+  <area shape="rect" coords="485,4,523,28" href="/etc/sitemap.asp" onfocus='this.blur();'>
+  <area shape="rect" coords="433,3,470,28" href="javascript:;" onfocus='this.blur();' onclick="javascript:window.open('/help/main_01.htm', 'help', 'width=650,height=709');">
+  <area shape="rect" coords="538,3,589,28" href="javascript:;" onfocus='this.blur();' onclick="javascript:window.open('/help/main_10.htm', 'buy', 'width=650,height=709');">
+  <area shape="rect" coords="598,4,646,26" href="mailto:krpia@nurimedia.co.kr" onfocus='this.blur();'>
+</map>
+<!--
+<script>
+action = window.setInterval("heartBeat()",1);
+</script>
+-->
+</body>
+</html>
