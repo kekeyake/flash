@@ -199,12 +199,13 @@
     position: absolute;
     left: 0;
     top:0;
-    opacity: .5;
+    opacity: .8;
+    z-index: 1;
 }
 .new_ca .ca_container.m:after {
     display: block;
     content:'';
-    width:200px;
+    width:195px;
     height: 500px;
     background: rgba(0,0,0,.5);
     position: absolute;
@@ -224,8 +225,8 @@
     position: absolute;
     right:0;
     top:90px;
-    width: 200px;
-    z-index: 1;
+    width: 190px;
+    z-index: 2;
 }
 .new_ca .ca_container.m p {
     letter-spacing: -1px;
@@ -287,6 +288,7 @@
     position: absolute;
     top:344px;
     width: 188px;
+    z-index: 2;
 }
 .new_ca .ca_container.m ._special p {
     margin:0 0 5px;
