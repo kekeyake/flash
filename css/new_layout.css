@@ -460,40 +460,9 @@
 .p_main p {
     position: absolute;
     margin:0;
+    letter-spacing: -1px;
 }
-.p_main .t1 {
-    right:110px;
-    font-size: 30px;
-    top:310px;
-    font-family: serif;
-    color:#664158;
-}
-.p_main .t2 {
-    color:#fff;
-    top:340px;
-    right:60px;
-    font-size: 16px;
-    padding-bottom: 10px;
-    border-bottom: 1px dashed rgba(255,255,255,.5);
-}
-.p_main .t2 span {
-    display: inline-block;
-    width: 70px;
-}
-.p_main .t3 {
-    top:395px;
-    right:65px;
-    font-size: 14px;
-    padding:0 5px 10px;
-    border-bottom: 1px dashed rgba(255,255,255,.5);
-    color:gold;
-}
-.p_main .t4 {
-    left:25px;
-    bottom:25px;
-    font-size: 13px;
-    color:#fff;
-}
+
 .d_main {
     width: 334px;
     height: 427px;
