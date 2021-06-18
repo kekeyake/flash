@@ -1,102 +1,139 @@
-세계의 현대 건축가 
-https://ca2.krpia.co.kr/
+한국의 단청 예술
+https://danchung.krpia.co.kr/
 
-<link href="css/new_layout_ca2.css" rel="stylesheet" type="text/css">
+<link href="css/new_layout_d.css" rel="stylesheet" type="text/css">
 <script src="//code.jquery.com/jquery.min.js"></script>
-<script language="JavaScript" src="js/ui_ca2.js"></script>
+<script language="JavaScript" src="js/ui_d.js"></script>
 
-퀵메뉴 플래시 대체 : 공통
+메인 플래시 대체
 
-<div id="quickmenu">
-    <!-- <table width="95" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td height="173" align="center" valign="top"><script src="https://ca2.krpia.co.kr/swf/special01.js"></script></td>
-        </tr>
-    </table> -->
-    <div class="quick">
-        <p class="tit"><img src="new/img/ico_arrow.svg" alt=""> 기획메뉴</p>
-        <ul>
-            <li><a href="#a">유형별보기</a></li>
-            <li><a href="#a">갤러리</a></li>
-        </ul>
-    </div>
-    <table width="95" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-            <td height="20" align="center" valign="top">
-            <a href="https://ca2.krpia.co.kr/htm/main.asp?LACD=EN&" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btEnglish','','https://ca2.krpia.co.kr/image/btEnglishr.gif',1)"><img src="https://ca2.krpia.co.kr/image/btEnglish.gif" name="btEnglish" width="79" height="18" border="0" align="absmiddle" id="btEnglish" /></a>
-            </td>
-        </tr>
-        <tr>
-            <td height="20" align="center" valign="top"><a href="#" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('btTop','','https://ca2.krpia.co.kr/image/btTopr.gif',1)"><img src="https://ca2.krpia.co.kr/image/btTop.gif" name="btTop" width="79" height="15" border="0" id="btTop" /></a></td>
-        </tr>
-    </table>
-</div>
-
-
-상단메뉴 플래시 대체 : 공통
-
-<div id="menu01">
-    <!-- width 136, height 217 -->
-    <ul class="menu_list">
-        <li><a href="#a">Bernard Tschumi</a></li>
-        <li><a href="#a">Dominique Perrault</a></li>
-        <li><a href="#a">Kim, Seok-chul</a></li>
-        <li><a href="#a">Mario Botta</a></li>
-        <li><a href="#a">Massimiliano Fuksas</a></li>
-        <li><a href="#a">Peter Eisenman</a></li>
-        <li><a href="#a">Rem koolhaas</a></li>
-        <li><a href="#a">Steven Holl</a></li>
-        <li><a href="#a">Zaha Hadid</a></li>
-    </ul>
-</div>
-<!--?2-->
-<div id="menu02">
-    <!-- width 136, height 217 -->
-    <ul class="menu_list">
-        <li><a href="#a">Architecture Studio</a></li>
-        <li><a href="#a">Coop Himmelblau</a></li>
-        <li><a href="#a">gmp</a></li>
-        <li><a href="#a">KPF</a></li>
-        <li><a href="#a">UN Studio</a></li>
+<!-- <script language="javascript">
+    embed_flash('image/navigation_07_5.swf', '334', '427');
+</script> -->
+<div class="d_main">
+    <img src="new/img/d1/bg_d1.jpg" alt="">
+    <ul>
+        <li><a href="#a">단청의 이해</a></li>
+        <li><a href="#a">단청제작과정</a></li>
+        <li><a href="#a">단청문양갤러리</a></li>
+        <li><a href="#a">영상으로 보는 단청</a></li>
+        <li><a href="#a">만봉스님의 단청세계</a></li>
     </ul>
 </div>
 
-
-하단 썸네일 플래시 대체 : main.asp만 적용
-
-<div id="thumb">
-    <!-- <script src="https://ca2.krpia.co.kr/swf/thumb.js"></script> -->
-    <div class="thumb_list">
-        <div class="box architect">
-            <p class="tit">건축가</p>
-            <ul>
-                <li><a href="#a"><img src="new/img/architect_01.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_02.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_03.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_04.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_05.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_06.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_07.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_08.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/architect_09.jpg" alt=""></a></li>
-            </ul>
-        </div>
-        <div class="box studio">
-            <p class="tit">건축가</p>
-            <ul>
-                <li><a href="#a"><img src="new/img/studio_01.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/studio_02.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/studio_03.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/studio_04.jpg" alt=""></a></li>
-                <li><a href="#a"><img src="new/img/studio_05.jpg" alt=""></a></li>
-            </ul>
-        </div>
-        <img src="new/img/thumb_text.svg" alt="" class="txt">
-    </div>
+서브메뉴 공통
+<!-- <script language="javascript">
+    embed_flash('/images/navigation_47.swf', '731', '78');
+</script>	 -->
+<div class="d_sub_menu">
+    <ul>
+        <li>
+            <a href="#a">단청의 이해</a>
+            <div class="sub_m">
+                <a href="#a">단청이란</a>
+                <a href="#a">단청의 목적</a>
+                <a href="#a">단청의 기원과 변천</a>
+                <a href="#a">단청의 분류</a>
+            </div>
+        </li>
+        <li>
+            <a href="#a">단청 제작과정</a>
+            <div class="sub_m">
+                <a href="#a">단청의 안료</a>
+                <a href="#a">단청의 배색원리</a>
+                <a href="#a">단청의 제작과정</a>
+            </div>
+        </li>
+        <li>
+            <a href="#a">단청문양 갤러리</a>
+            <div class="sub_m">
+                <a href="#a">분류별 문양소개</a>
+                <a href="#a">문양갤러리</a>
+                <a href="#a">부재별 문양</a>
+            </div>
+        </li>
+        <li>
+            <a href="#a">영상으로 보는 단청</a>
+            <div class="sub_m">
+                <a href="#a">봉원사 단청</a>
+                <a href="#a">10대 사찰의 단청</a>
+            </div>
+        </li>
+        <li>
+            <a href="#a">만봉스님 단청세계</a>
+            <div class="sub_m">
+                <a href="#a">만봉스님 단청문양의 특징</a>
+                <a href="#a">조선시대 단청장</a>
+                <a href="#a">생애와 전승활동</a>
+                <a href="#a">영상기록</a>
+                <a href="#a">원화감상</a>
+            </div>
+        </li>
+    </ul>
 </div>
 
+서브컨텐츠 메뉴
+<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="661" height="37">
+<param name="movie" value="https://danchung.krpia.co.kr/images/danchung/manuba_01.swf">
+<param name="quality" value="high">
+<embed src="https://danchung.krpia.co.kr/images/danchung/manuba_01.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="661" height="37"></embed></object> -->
+<div class="d_sub2">
+    <ul>
+        <li><a href="#a">건물상태와 성격</a></li>
+        <li><a href="#a">조형양식 등급</a></li>
+        <li><a href="#a">궁궐,불교,유교 단청 차이</a></li>
+        <li><a href="#a">한중일 단청 특색</a></li>
+    </ul>
+</div>
 
-중앙 지도 플래시 대체 : main.asp만 적용
+<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="661" height="37">
+<param name="movie" value="https://danchung.krpia.co.kr/images/gallery/manuba_02.swf">
+<param name="quality" value="high">
+<embed src="https://danchung.krpia.co.kr/images/gallery/manuba_02.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="661" height="37"></embed></object> -->
+<div class="d_sub2">
+    <ul>
+        <li><a href="#a">머리초</a></li>
+        <li><a href="#a">주의초</a></li>
+        <li><a href="#a">금문</a></li>
+        <li><a href="#a">반자초</a></li>
+        <li><a href="#a">궁창초</a></li>
+        <li><a href="#a">개판초</a></li>
+        <li><a href="#a">부리초</a></li>
+        <li><a href="#a">착고초</a></li>
+        <li><a href="#a">주두, 소로초</a></li>
+        <li><a href="#a">기타</a></li>
+    </ul>
+</div>
 
-<!-- <td height="590" valign="top" background="../image/bgBody.gif" style="background-repeat:no-repeat"><!--지도 --><script src="../swf/map.js"></script></td> -->
-<td height="590" valign="top"><img src="new/img/map.jpg" alt=""></td>
+<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="661" height="37">
+<param name="movie" value="https://danchung.krpia.co.kr/images/gallery/manuba_03.swf">
+<param name="quality" value="high">
+<embed src="https://danchung.krpia.co.kr/images/gallery/manuba_03.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="661" height="37"></embed></object> -->
+<div class="d_sub2">
+    <ul>
+        <li><a href="#a">체목부</a></li>
+        <li><a href="#a">공포부</a></li>
+        <li><a href="#a">처마부</a></li>
+        <li><a href="#a">천장부</a></li>
+        <li><a href="#a">창호·벽체·기타</a></li>
+    </ul>
+</div>
+
+<!-- <object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0" width="661" height="37">
+<param name="movie" value="https://danchung.krpia.co.kr/images/image/manuba_04.swf">
+<param name="quality" value="high">
+<embed src="https://danchung.krpia.co.kr/images/image/manuba_04.swf" quality="high" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash" width="661" height="37"></embed></object> -->
+<div class="d_sub2">
+    <ul>
+        <li><a href="#a">법주사</a></li>
+        <li><a href="#a">금산사</a></li>
+        <li><a href="#a">승가사</a></li>
+        <li><a href="#a">송광사</a></li>
+        <li><a href="#a">낙산사</a></li>
+        <li><a href="#a">구인사</a></li>
+        <li><a href="#a">해인사</a></li>
+        <li><a href="#a">월정사</a></li>
+        <li><a href="#a">영각사</a></li>
+        <li><a href="#a">세등선원</a></li>
+    </ul>
+</div>

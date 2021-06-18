@@ -1,0 +1,19 @@
+
+
+.p_main {
+    height: 626px;
+    background: #fcf3fb;
+    border-radius: 20px;
+    position: relative;
+    box-sizing: border-box;
+    padding:5px;
+}
+.p_main img {
+    width: 100%;
+}
+.p_main p {
+    position: absolute;
+    margin:0;
+    letter-spacing: -1px;
+}
+
