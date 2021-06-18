@@ -39,4 +39,10 @@ $(function(){
         $('#menu2').attr("src", $('#menu2').attr("src").replace("menu2r.gif","menu2.gif"));      
     });
 
+    $('.d_sub_menu li').on('mouseenter',function(){
+        $(this).find('.sub_m').show();
+    }).on('mouseleave',function(){
+        $(this).find('.sub_m').hide();
+    });
+
 });
