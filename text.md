@@ -1,9 +1,9 @@
 세계의 현대 건축가 
 https://ca2.krpia.co.kr/
 
-<link href="css/new_layout.css" rel="stylesheet" type="text/css">
-<script src="//code.jquery.com/jquery.min.js"></script>
-<script language="JavaScript" src="js/ui.js"></script>
+<link href="css/new_layout.css" rel="stylesheet" type="text/css">   
+<script src="//code.jquery.com/jquery.min.js"></script>   
+<script language="JavaScript" src="js/ui.js"></script>   
 
 퀵메뉴 플래시 대체
 ```html
