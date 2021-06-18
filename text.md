@@ -32,3 +32,66 @@ https://ca2.krpia.co.kr/
         </table>
     </div>
 ```
+
+상단메뉴
+```
+<div id="menu01">
+    <!-- width 136, height 217 -->
+    <ul class="menu_list">
+        <li><a href="#a">Bernard Tschumi</a></li>
+        <li><a href="#a">Dominique Perrault</a></li>
+        <li><a href="#a">Kim, Seok-chul</a></li>
+        <li><a href="#a">Mario Botta</a></li>
+        <li><a href="#a">Massimiliano Fuksas</a></li>
+        <li><a href="#a">Peter Eisenman</a></li>
+        <li><a href="#a">Rem koolhaas</a></li>
+        <li><a href="#a">Steven Holl</a></li>
+        <li><a href="#a">Zaha Hadid</a></li>
+    </ul>
+</div>
+<!--?2-->
+<div id="menu02">
+    <!-- width 136, height 217 -->
+    <ul class="menu_list">
+        <li><a href="#a">Architecture Studio</a></li>
+        <li><a href="#a">Coop Himmelblau</a></li>
+        <li><a href="#a">gmp</a></li>
+        <li><a href="#a">KPF</a></li>
+        <li><a href="#a">UN Studio</a></li>
+    </ul>
+</div>
+```
+
+하단 썸네일
+```
+<div id="thumb">
+    <!-- <script src="https://ca2.krpia.co.kr/swf/thumb.js"></script> -->
+    <div class="thumb_list">
+        <div class="box architect">
+            <p class="tit">건축가</p>
+            <ul>
+                <li><a href="#a"><img src="new/img/architect_01.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_02.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_03.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_04.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_05.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_06.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_07.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_08.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/architect_09.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <div class="box studio">
+            <p class="tit">건축가</p>
+            <ul>
+                <li><a href="#a"><img src="new/img/studio_01.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/studio_02.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/studio_03.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/studio_04.jpg" alt=""></a></li>
+                <li><a href="#a"><img src="new/img/studio_05.jpg" alt=""></a></li>
+            </ul>
+        </div>
+        <img src="new/img/thumb_text.svg" alt="" class="txt">
+    </div>
+</div>
+```
